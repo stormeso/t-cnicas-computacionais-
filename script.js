@@ -1,98 +1,33 @@
-Skip to content
-alura-cursos
-missao-IA
-Repository navigation
-Code
-Pull requests
-1
- (1)
-Agents
-Actions
-Projects
-Security and quality
-Insights
-Commit d687e99
-femascheti
-femascheti
-authored
-on Dec 7, 2023
-Verified
-projeto final da missao
-main
-0 parents  commit 
-d687e99
-3 files changed
 
-+180
-Lines changed: 180 additions & 0 deletions
-File tree
-Filter files…
-index.html
-script.js
-2
-style.css
-Search within code
- 
-Customizable line height
-The default line height has been increased for improved accessibility. You can choose to enable a more compact line height from the view settings menu.
+const caixaPrincipal = document.querySelector(“.caixa-principal”);
+const caixaPerguntas = document.querySelector(“.caixa-perguntas”);
+const caixaAlternativas = document.querySelector(“.caixa-alternativas”);
+const caixaResultado = document.querySelector(“.caixa-resultado”);
+const textoResultado = document.querySelector(“.texto-resultado”);
 
-‎index.html‎
-+20
-Lines changed: 20 additions & 0 deletions
-Original file line number	Diff line number	Diff line change
-@@ -0,0 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Você decide o futuro da IA</title>
-</head>
-<body>
-    <div class="caixa-principal">
-        <h1>Você decide o futuro da IA</h1>
-        <div class="caixa-perguntas"></div>
-        <div class="caixa-alternativas"></div>
-        <div class="caixa-resultado">
-            <p class="texto-resultado"></p>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
-‎script.js‎
-+117
-Lines changed: 117 additions & 0 deletions
-Original file line number	Diff line number	Diff line change
-@@ -0,0 +1,117 @@
-const caixaPrincipal = document.querySelector(".caixa-principal");
-const caixaPerguntas = document.querySelector(".caixa-perguntas");
-const caixaAlternativas = document.querySelector(".caixa-alternativas");
-const caixaResultado = document.querySelector(".caixa-resultado");
-const textoResultado = document.querySelector(".texto-resultado");
-const perguntas = [
-    {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
-        alternativas: [
-            {
-                texto: "Isso é assustador!",
-                afirmacao: "afirmacao"
-            },
-            {
-                texto: "Isso é maravilhoso!",
-                afirmacao: "afirmacao"
-            }           
-            
-        ]
-    },
-    {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial (IA), uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre elaIA. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de tecnologia em sala de aula. Qual atitude você toma?",
-        alternativas: [
-            {
-                texto:"Utilizar uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento",
-                afirmacao:"afirmacao"
-            },
+const pergunts = [
+    {const perguntas = [
+  {
+    enunciado:
+      "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+    alternativas: [
+      {
+        texto: "Isso é assustador!",
+        afirmacao: [
+          "No início ficou com medo do que essa tecnologia pode fazer. ",
+          "Achou assustador pensar na velocidade na qual a tecnologia está avançando.",
+        ],
+      },
+      {
+        texto: "Isso é maravilhoso!",
+        afirmacao: [
+          "Quis saber como usar IA no seu dia a dia.",
+          "Foi atrás de vídeos, artigos e mais informaçõe sobre como utilizar essa tecnologia.",
+        ],
+      },
+    ],
+  },
+];
             {
                 texto: "Escrever o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
                 afirmacao:"afirmacao"
@@ -175,53 +110,5 @@ function mostraResultado(){
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = ""; 
 }
-mostraPergunta();
-‎style.css‎
-+43
-Lines changed: 43 additions & 0 deletions
-Original file line number	Diff line number	Diff line change
-@@ -0,0 +1,43 @@
-:root{
-    --cor-fundo: #01080E ;
-    --cor-principal: #0B0D20 ;
-    --cor-secundaria: #212333; 
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
-}
-body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-.caixa-principal{
-    background-color: var(--cor-principal);
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    padding: 20px;
-}
-h1{
-    color: var(--cor-destaque);
-}
-button {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    transition: background-color 0.3s;
-}
-button:hover{
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
-}
-0 commit comments
-Comments
-0
- (0)
-Comment
-You're not receiving notifications from this thread.
+
 
